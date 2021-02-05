@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AirpayTestSuite" parallel="tests" thread-count="1" verbose="1">
+	<parameter name="browser" value="chrome"/>
+	<parameter name="headless" value="false"/>
+	<!-- env airpay or vittel -->
+	<parameter name="env" value="vittel"/>
+  	<test name="Regresion test" preserve-order="true" group-by-instances="true">
+	     <classes>
+	    		<class name="TestCases.AuthenticationSignUpTest">
+	    			<methods>
+						<exclude name="A01_SignUpWithInvalidCredential"/>
+	    			</methods>
+	    		</class>
+	    		<class name="TestCases.AuthenticationSignUpTest2">
+	    			<methods>
+						<exclude name="A02_SignUpWithValidCredential"/>
+						<exclude name="A03_SecondStepSignUp"/>
+						<exclude name="A04_ThirdStepSignUp"/>
+						<exclude name="A05_FouthStepofSignUp"/>
+						<exclude name="A06_VerifyEmailPage"/>
+						
+	    			</methods>
+	    		</class>
+	   			<class name="TestCases.AuthenticationSignInTest">
+	    			<methods>
+						<exclude name="B01_LoginWithInvalidCredential"/>
+						<exclude name="B02_LoginWithUnverifiedUserAccount"/>
+						<exclude name="B03_LoginWithVerifiedUserAccount"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.ForgetPasswordTest">
+	    			<methods>
+						<exclude name="C01_UnverifiedUserTryToForgetPassword"/>
+						<exclude name="C02_ForgetPasswordWithInvalidEmailCredential"/>
+						<exclude name="C03_ForgetPasswordWithValidEmailCredential"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.EditProfileTest">
+	    			<methods>
+						<include name="signIn"/>
+						<include name="E01_AccessEditProfileBasicInformationTab"/>
+						<include name="E02_AccessEditProfileSupportingDocumentTab"/>
+						<exclude name="E03_LetMandatoryFieldIsEmptyBasicInfoTab"/>
+						<exclude name="E04_LetMandatoryFieldIsEmptySupportingDocTab"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.UpdatePasswordTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="F01_UpdatePasswordWithIncorrectCurrentPassword"/>
+						<exclude name="F02_UpdatePasswordWithNewPasswordAndCoPasswordAreDifferent"/>
+						<exclude name="F03_UpdatePasswordWithCorrectInput"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.UploadContractTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="G01_UploadFile"/>
+						<exclude name="G02_DownloadFile"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.DocumentationTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="H01_GettingStarted"/>
+						<exclude name="H02_MerchantOnBoarding"/>
+						<exclude name="H03_ServiceOnBoarding"/>
+						<exclude name="H04_Integration"/>
+						<exclude name="H05_Reporting"/>
+						<exclude name="H06_FAQ"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.AddServiceTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="J01_FirstStepAddService"/>
+						<exclude name="J02_SecondStepService"/>
+						<exclude name="J03_ThirdStepService"/>
+						<exclude name="J04_FourthStepService"/>
+						<exclude name="J05_FifthStepService"/>
+						<exclude name="J06_SixthStepService"/>
+						
+	    			</methods>
+	    		</class>
+	    		<!-- You need to execute service management test before list service test for approval -->
+	    		<class name="TestCases.ServiceManagementTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+	    				<exclude name="R01_ViewServiceManagement"/>
+						<exclude name="R02_SearchServiceManagement"/>
+						<exclude name="R03_ApproveService"/>
+						<exclude name="R04_RejectService"/>
+					</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.ListServiceTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="K01_AccessListServicePage"/>
+						<exclude name="K02_ActivateService"/>
+						<exclude name="K03_DeactiveService"/>
+						<exclude name="K04_EditServiceWithLetOneOrAllMandatoryFieldsAreEmpty"/>
+						<exclude name="K05_EditServiceWithAllMandatoryFieldsAreFilled"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.InviteUserTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="N01_InviteUserWithAllMandatoryAreEmpty"/>
+						<exclude name="N02_InviteTakenUsernameOrTakenEmailAddress"/>
+						<exclude name="N03_InviteUserWithValidCredential"/>
+	    			</methods>
+	    		</class>
+	    		
+	    		<class name="TestCases.UserApprovalTest">
+	    			<methods>
+	    				<exclude name="signIn"/>
+						<exclude name="O01_ClickOnApproveButtonRejectButtonWithoutSelectCheckbox"/>
+						<exclude name="O02_RejectUser"/>
+						<exclude name="O02_ApproveUser"/>
+	    			</methods>
+	    		</class>
+	    </classes>  
+  </test>
+  
+</suite>
