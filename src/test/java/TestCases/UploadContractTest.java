@@ -22,7 +22,7 @@ public class UploadContractTest extends BaseWeb{
 	/*
 	 * User sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		userSignIn();
 	}
@@ -31,7 +31,7 @@ public class UploadContractTest extends BaseWeb{
 	 * G01
 	 * Upload file
 	 */
-	@Test
+	@Test(priority=2)
 	public void G01_UploadFile() throws InterruptedException {
 		SideMenuPage smp = new SideMenuPage(driver);
 		UploadContractPage ucp = new UploadContractPage(driver);
@@ -52,18 +52,15 @@ public class UploadContractTest extends BaseWeb{
 	 * G02
 	 * Download file
 	 */
-	@Test
+	@Test(priority=3)
 	public void G02_DownloadFile() throws InterruptedException {
 		UploadContractPage ucp = new UploadContractPage(driver);
 		
 		System.out.println("-> download file");
-		try {
-			ucp.clickOnDownload1();
-			ucp.clickOnDownload2();
-			ucp.clickOnDownload3();
-		}catch(Exception e) {
-			assertTrue(false, "something wrong with download button");
-		}
+		ucp.clickOnDownload1();
+		ucp.clickOnDownload2();
+		ucp.clickOnDownload3();
+		
 		
 	}
 

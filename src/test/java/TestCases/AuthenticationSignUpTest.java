@@ -22,7 +22,7 @@ public class AuthenticationSignUpTest extends BaseWeb {
 	 * 
 	 */
 	
-	@Test
+	@Test(priority=1)
 	public void A01_SignUpWithInvalidCredential() throws InterruptedException 
 	{
 		String getUsername = dayDate();
@@ -37,7 +37,11 @@ public class AuthenticationSignUpTest extends BaseWeb {
 		si.clickSignUpUrlLink();
 		
 		System.out.println("1. Verify signup with username is taken");
-		su.typeUserName("airpay1");
+		if(environment.equals("airpay")) {
+			su.typeUserName("airpay12");
+		}else {
+			su.typeUserName("vittel2");
+		}
 		su.typeEmail(getUsername+"@yopmail.com");
 		su.typePassword("Abcde12345!");
 		su.typeCoPassword("Abcde12345!");

@@ -144,7 +144,7 @@ public class Listener implements ITestListener {
 							row.getCell(11).setCellValue(splitWord[1]);
 						}
 						
-						System.out.println(countRow+" FAIL");
+						//System.out.println(countRow+" FAIL");
 					}/*else {
 						System.out.println("masuk skip3");
 						//row.getCell(testResult).setCellValue("-");

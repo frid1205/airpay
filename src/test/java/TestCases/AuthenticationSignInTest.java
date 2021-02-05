@@ -42,8 +42,8 @@ public class AuthenticationSignInTest extends BaseWeb{
 		si.clickSignInButton();
 		
 		System.out.println("-> Verify");
-		//assertTrue(si.errorSignInMessage(), "There is no message validation for invalid user");
-		Assert.assertTrue(false);
+		assertTrue(si.errorSignInMessage(), "There is no message validation for invalid user");
+		
 	}
 	
 	/*
@@ -59,7 +59,7 @@ public class AuthenticationSignInTest extends BaseWeb{
 		signInPage si = new signInPage(driver);
 		
 		System.out.println("-> Input unverified username");
-		si.typeUserName("901211227");
+		si.typeUserName("unveriUser");
 		
 		System.out.println("-> Input valid password");
 		si.typePassword("Abcde12345!");
@@ -88,7 +88,11 @@ public class AuthenticationSignInTest extends BaseWeb{
 		HomePage hp = new HomePage(driver);
 		
 		System.out.println("-> Input valid username");
-		si.typeUserName("airpay1");
+		if(environment.equals("airpay")) {
+			si.typeUserName("airpay12");
+		}else {
+			si.typeUserName("vittel2");
+		}
 		
 		System.out.println("-> Input valid password");
 		si.typePassword("Abcde12345!");

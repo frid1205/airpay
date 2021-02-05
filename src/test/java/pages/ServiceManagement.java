@@ -54,11 +54,11 @@ public class ServiceManagement extends BasePage{
 	@CacheLookup
 	WebElement searchButton;
 	
-	@FindBy(xpath="//tr//td[8 and (contains(text(),\"Reject\") or contains(text(),\"Submitted\"))]/../td/a[@class=\"btn color-e approve_service\"]")
+	@FindBy(xpath="//tr//td[8]/../td/a[contains(@class,\"approve_service\")]")
 	@CacheLookup
 	WebElement approveButton;
 	
-	@FindBy(xpath="//tr//td[8 and (contains(text(),\"Approved\") or contains(text(),\"Submitted\"))]/../td/a[@class=\"btn color-a reject_service\"]")
+	@FindBy(xpath="//tr//td[8]/../td/a[contains(@class,\"reject_service\")]")
 	@CacheLookup
 	WebElement rejectButton;
 	
@@ -171,17 +171,17 @@ public class ServiceManagement extends BasePage{
 	@Step("Search Service")
 	public void searchService() throws InterruptedException {
 		System.out.println("-> search");
-		if(getEnvironment().contains("prod")) {
+		if(getEnvironment().contains("airpay")) {
 			selectCountryFilter("Indonesia");
 			selectOperatorFilter("telkomsel");
 			selectPaymentTypeFilter("Subscription");
-			selectStatusFilter("Submitted");
+			//selectStatusFilter("Submitted");
 			
-		}else if(getEnvironment().contains("stg")) {
+		}else {
 			selectCountryFilter("Laos");
 			selectOperatorFilter("ltc");
 			selectPaymentTypeFilter("Submitted");
-			selectStatusFilter("Submitted");
+			//selectStatusFilter("Submitted");
 		}
 		
 		clickOnSearchButton();

@@ -29,7 +29,7 @@ public class UserApprovalPage extends BasePage{
 	@CacheLookup
 	WebElement approveButton;
 	
-	@FindBy(xpath="//button[contains(text(),\"reject\")]")
+	@FindBy(xpath="//button[contains(text(),\"Reject\")]")
 	@CacheLookup
 	WebElement rejectButton;
 	
@@ -56,11 +56,19 @@ public class UserApprovalPage extends BasePage{
 	}
 	
 	public void clickOnApproveButton() {
-		waitVisibility(approveButton).click();
+		try {
+			waitVisibility(approveButton).click();
+		}catch(Exception e) {
+			clickELement(approveButton);
+		}
 	}
 	
 	public void clickOnRejectButton() {
-		waitVisibility(rejectButton).click();
+		try {
+			waitVisibility(rejectButton).click();
+		}catch(Exception e) {
+			clickELement(rejectButton);
+		}
 	}
 	
 	public boolean selectCheckboxValidationMessage() {

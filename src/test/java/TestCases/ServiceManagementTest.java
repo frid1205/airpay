@@ -102,6 +102,7 @@ public class ServiceManagementTest extends BaseWeb{
 		ServiceManagement sm = new ServiceManagement(driver);
 		SoftAssert sa = new SoftAssert();
 		
+		Thread.sleep(1000);
 		System.out.println("-> Click on reset button");
 		sm.clickOnResetButton();
 		Thread.sleep(2000);

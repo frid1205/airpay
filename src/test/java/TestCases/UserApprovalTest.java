@@ -19,7 +19,7 @@ public class UserApprovalTest extends BaseWeb{
 	/*
 	 * Admin sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		adminSignIn();
 	}
@@ -27,14 +27,14 @@ public class UserApprovalTest extends BaseWeb{
 	/*
 	 * Click on "Approve" button or "Reject" button without select the checkbox
 	 */
-	@Test
+	@Test(priority=2)
 	public void O01_ClickOnApproveButtonRejectButtonWithoutSelectCheckbox() throws InterruptedException {
 		SideMenuPage smp = new SideMenuPage(driver);
 		UserApprovalPage uap = new UserApprovalPage(driver);
 		SoftAssert sa = new SoftAssert();
 		
-		System.out.println("-> Access add service page");
-		smp.clickOnServiceDropDown();		
+		System.out.println("-> Access user approval page");
+		smp.clickOnAdminstrationDropDown();		
 		smp.clickOnUserApproval();
 		
 		System.out.println("-> click on approve button without select any user pending");
@@ -57,7 +57,7 @@ public class UserApprovalTest extends BaseWeb{
 	 * O02
 	 * Reject User
 	 */
-	@Test
+	@Test(priority=3, enabled=false)
 	public void O02_RejectUser() throws InterruptedException {
 		UserApprovalPage uap = new UserApprovalPage(driver);
 		SoftAssert sa = new SoftAssert();
@@ -78,7 +78,7 @@ public class UserApprovalTest extends BaseWeb{
 	 * O03
 	 * Approve User
 	 */
-	@Test
+	@Test(priority=4)
 	public void O02_ApproveUser() throws InterruptedException {
 		UserApprovalPage uap = new UserApprovalPage(driver);
 		SoftAssert sa = new SoftAssert();

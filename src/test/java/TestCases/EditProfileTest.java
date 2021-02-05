@@ -21,7 +21,7 @@ public class EditProfileTest extends BaseWeb{
 	/*
 	 * User sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		userSignIn();
 	}
@@ -31,7 +31,7 @@ public class EditProfileTest extends BaseWeb{
 	 * Access edit profile page - Basic Information tab
 	 * 
 	 */
-	@Test
+	@Test(priority=2)
 	public void E01_AccessEditProfileBasicInformationTab() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -53,7 +53,7 @@ public class EditProfileTest extends BaseWeb{
 	 * Access edit profile page - Supporting Document tab
 	 * 
 	 */
-	@Test
+	@Test(priority=3)
 	public void E02_AccessEditProfileSupportingDocumentTab() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -72,7 +72,7 @@ public class EditProfileTest extends BaseWeb{
 	 * Let mandatory field is empty in Edit prifle page - basic information tab
 	 * 
 	 */
-	@Test
+	@Test(priority=4)
 	public void E03_LetMandatoryFieldIsEmptyBasicInfoTab() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -99,7 +99,7 @@ public class EditProfileTest extends BaseWeb{
 	 * Let mandatory field is empty in Edit prifle page - supporting document tab
 	 * 
 	 */
-	@Test
+	@Test(priority=5)
 	public void E04_LetMandatoryFieldIsEmptySupportingDocTab() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);

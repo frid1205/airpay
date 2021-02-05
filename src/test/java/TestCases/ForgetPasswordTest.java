@@ -24,7 +24,7 @@ public class ForgetPasswordTest extends BaseWeb{
 	 * 
 	 */
 	
-	@Test
+	@Test(priority=1)
 	public void C01_UnverifiedUserTryToForgetPassword() throws InterruptedException 
 	{
 		signInPage si = new signInPage(driver);
@@ -34,7 +34,7 @@ public class ForgetPasswordTest extends BaseWeb{
 		si.clickForgetPasswordLink();
 		
 		System.out.println("-> Input unverified email address");
-		fp.typeEmail("901211227@yopmail.com");
+		fp.typeEmail("unveriUser@yopmail.com");
 		
 		System.out.println("-> Click on reset password button");
 		fp.clickOnResetPasswordButton();
@@ -50,7 +50,7 @@ public class ForgetPasswordTest extends BaseWeb{
 	 * 
 	 */
 	
-	@Test
+	@Test(priority=2)
 	public void C02_ForgetPasswordWithInvalidEmailCredential() throws InterruptedException 
 	{
 		//signInPage si = PageFactory.initElements(driver, signInPage.class);
@@ -74,7 +74,7 @@ public class ForgetPasswordTest extends BaseWeb{
 	 * 
 	 */
 	
-	@Test
+	@Test(priority=3)
 	public void C03_ForgetPasswordWithValidEmailCredential() throws InterruptedException 
 	{
 		//signInPage si = PageFactory.initElements(driver, signInPage.class);
@@ -82,11 +82,15 @@ public class ForgetPasswordTest extends BaseWeb{
 		signInPage si = new signInPage(driver);
 		ForgetPasswordPage fp = new ForgetPasswordPage(driver);
 		
-		System.out.println("-> Go to forget password page");
-		si.clickForgetPasswordLink();
+		//System.out.println("-> Go to forget password page");
+		//si.clickForgetPasswordLink();
 		
 		System.out.println("-> Input unverified email address");
-		fp.typeEmail("airpay1@yopmail.com");
+		if(environment.equals("airpay")) {
+			fp.typeEmail("airpay12@yopmail.com");
+		}else {
+			fp.typeEmail("vittel2@yopmail.com");
+		}
 		
 		System.out.println("-> Click on reset password button");
 		fp.clickOnResetPasswordButton();

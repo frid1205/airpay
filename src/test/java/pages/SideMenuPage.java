@@ -222,7 +222,7 @@ public class SideMenuPage extends BasePage{
 	}
 	
 	public void clickOnUserApproval() {
-		waitVisibility(userApproval);
+		waitVisibility(userApproval).click();
 	}
 
 }

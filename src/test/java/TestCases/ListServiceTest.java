@@ -42,9 +42,9 @@ public class ListServiceTest extends BaseWeb{
 		SoftAssert sa = new SoftAssert();
 		
 		System.out.println("-> Access List service page");
-		smp.clickOnServiceDropDown();		
+		smp.clickOnServiceDropDown();
 		smp.clickOnListService();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		System.out.println("-> Verify list service is exist");
 		sa.assertTrue(lsp.listServiceIsExist(), "List service is not exist");
@@ -69,6 +69,7 @@ public class ListServiceTest extends BaseWeb{
 		//ServiceManagementTest smt = new ServiceManagementTest();
 		SoftAssert sa = new SoftAssert();
 		
+		Thread.sleep(2000);
 		System.out.println("-> Click On Reset Button");
 		lsp.clickOnResetButton();
 		

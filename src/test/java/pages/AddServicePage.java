@@ -54,13 +54,13 @@ public class AddServicePage extends BasePage{
 	@CacheLookup
 	WebElement otp;
 	
-	@FindBy(xpath="//*[@for=\"country_indonesia\"]")
+	@FindBy(xpath="//*[contains(@for,\"indonesia\")]")
 	@CacheLookup
 	WebElement countryIndonesia;
 	
-	@FindBy(xpath="//*[@for=\"country_timor leste\"]")
+	@FindBy(xpath="//*[contains(@for,\"laos\")]")
 	@CacheLookup
-	WebElement countryTimorLeste;
+	WebElement countryLaos;
 	
 	@FindBy(id="service_step_two")
 	@CacheLookup
@@ -73,6 +73,10 @@ public class AddServicePage extends BasePage{
 	@FindBy(xpath="//img[contains(@src,\"elkomsel\")]/..")
 	@CacheLookup
 	WebElement selectOperator;
+	
+	@FindBy(xpath="//img[contains(@src,\"nitel\")]/..")
+	@CacheLookup
+	WebElement selectOperatorUnitel;
 	
 	@FindBy(id="service_step_four")
 	@CacheLookup
@@ -281,8 +285,8 @@ public class AddServicePage extends BasePage{
 		waitVisibility(countryIndonesia).click();
 	}
 	
-	public void clickOnTimorLesteCountry() {
-		waitVisibility(countryTimorLeste).click();
+	public void clickOnLaosCountry() {
+		waitVisibility(countryLaos).click();
 	}
 	
 	public void clickNextButtonSecondStep() {
@@ -295,6 +299,10 @@ public class AddServicePage extends BasePage{
 	
 	public void selectOperator() {
 		waitVisibility(selectOperator).click();
+	}
+	
+	public void selectOperatorUnitel() {
+		waitVisibility(selectOperatorUnitel).click();
 	}
 	
 	public void clickOnNextButtonFourStep() throws InterruptedException {
@@ -383,7 +391,12 @@ public class AddServicePage extends BasePage{
 	
 	public void selectChannelType() {
 		if(channelTypeIsExist()==false) {
-			channelTypeSMS.click();
+			try {
+				channelTypeSMS.click();
+			}catch(Exception e) {
+				clickELement(channelTypeSMS);
+			}
+			
 		}
 	}
 
@@ -516,7 +529,7 @@ public class AddServicePage extends BasePage{
 		if(x==1) {
 			clickOnIndonesiaCountry();
 		}else {
-			clickOnTimorLesteCountry();
+			clickOnLaosCountry();
 		}
 	}
 	

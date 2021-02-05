@@ -21,7 +21,7 @@ public class DocumentationTest extends BaseWeb{
 	/*
 	 * User sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		userSignIn();
 	}
@@ -31,7 +31,7 @@ public class DocumentationTest extends BaseWeb{
 	 * Getting Started
 	 * 
 	 */
-	@Test
+	@Test(priority=2)
 	public void H01_GettingStarted() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -55,7 +55,7 @@ public class DocumentationTest extends BaseWeb{
 	 * Merchant On Boarding
 	 * 
 	 */
-	@Test
+	@Test(priority=3)
 	public void H02_MerchantOnBoarding() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -78,7 +78,7 @@ public class DocumentationTest extends BaseWeb{
 	 * Service On Boarding
 	 * 
 	 */
-	@Test
+	@Test(priority=4)
 	public void H03_ServiceOnBoarding() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -101,7 +101,7 @@ public class DocumentationTest extends BaseWeb{
 	 * Integration
 	 * 
 	 */
-	@Test
+	@Test(priority=5)
 	public void H04_Integration() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -124,7 +124,7 @@ public class DocumentationTest extends BaseWeb{
 	 * Reporting
 	 * 
 	 */
-	@Test
+	@Test(priority=6)
 	public void H05_Reporting() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);
@@ -147,7 +147,7 @@ public class DocumentationTest extends BaseWeb{
 	 * FAQ
 	 * 
 	 */
-	@Test
+	@Test(priority=7)
 	public void H06_FAQ() throws InterruptedException 
 	{
 		//SideMenuPage smp = PageFactory.initElements(driver, SideMenuPage.class);

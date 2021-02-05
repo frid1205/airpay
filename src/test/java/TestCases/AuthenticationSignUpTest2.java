@@ -26,11 +26,10 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test
+	@Test(priority=1)
 	public void A02_SignUpWithValidCredential() throws InterruptedException 
 	{
 		
-		driver.get("http://www.yopmail.com/en/");
 		Thread.sleep(20000);
 		signInPage si = new signInPage(driver);
 		signUpPage su = new signUpPage(driver);
@@ -65,7 +64,7 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test
+	@Test(priority=2)
 	public void A03_SecondStepSignUp() throws InterruptedException 
 	{
 		signUpPage su = new signUpPage(driver);
@@ -101,7 +100,7 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test
+	@Test(priority=3)
 	public void A04_ThirdStepSignUp() throws InterruptedException 
 	{
 		signUpPage su = new signUpPage(driver);
@@ -130,7 +129,7 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test
+	@Test(priority=4)
 	public void A05_FouthStepofSignUp () throws InterruptedException 
 	{
 		signUpPage su = new signUpPage(driver);
@@ -155,7 +154,7 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test
+	@Test(priority=5)
 	public void A06_VerifyEmailPage () throws InterruptedException 
 	{
 		signUpPage su = new signUpPage(driver);

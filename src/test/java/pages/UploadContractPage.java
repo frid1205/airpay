@@ -31,15 +31,15 @@ public class UploadContractPage extends BasePage{
 	@CacheLookup
 	WebElement uploadContractButton;
 	
-	@FindBy(id="download_contract1")
+	@FindBy(name="download_contract1")
 	@CacheLookup
 	WebElement downloadContractButton1;
 	
-	@FindBy(id="upload_contract")
+	@FindBy(name="download_contract2")
 	@CacheLookup
 	WebElement downloadContractButton2;
 	
-	@FindBy(id="upload_contract")
+	@FindBy(name="download_contract3")
 	@CacheLookup
 	WebElement downloadContractButton3;
 	

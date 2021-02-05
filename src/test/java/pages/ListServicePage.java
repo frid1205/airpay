@@ -209,7 +209,7 @@ WebDriver driver;
 	@Step("Search Service")
 	public void searchService() throws InterruptedException {
 		System.out.println("-> search");
-		if(getEnvironment().contains("prod")) {
+		if(getEnvironment().contains("airpay")) {
 			selectCountryFilter("Indonesia");
 			selectOperatorFilter("telkomsel");
 			selectPaymentTypeFilter("Subscription");
@@ -217,7 +217,7 @@ WebDriver driver;
 			//selectCategoryFilter();
 		}else if(getEnvironment().contains("stg")) {
 			selectCountryFilter("Laos");
-			selectOperatorFilter("ltc");
+			selectOperatorFilter("Unitel");
 			selectPaymentTypeFilter("Submitted");
 			//selectStatusFilter();
 			//selectCategoryFilter();

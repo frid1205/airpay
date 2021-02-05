@@ -21,7 +21,7 @@ public class UpdatePasswordTest extends BaseWeb {
 	/*
 	 * User sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		userSignIn();
 	}
@@ -31,7 +31,7 @@ public class UpdatePasswordTest extends BaseWeb {
 	 * Update password, with incorrect Current Password
 	 * 
 	 */
-	@Test
+	@Test(priority=2)
 	public void F01_UpdatePasswordWithIncorrectCurrentPassword() throws InterruptedException 
 	{
 		SideMenuPage smp = new SideMenuPage(driver);
@@ -62,7 +62,7 @@ public class UpdatePasswordTest extends BaseWeb {
 	 * Update password, with new password and Co-password are different of each
 	 * 
 	 */
-	@Test
+	@Test(priority=3)
 	public void F02_UpdatePasswordWithNewPasswordAndCoPasswordAreDifferent() throws InterruptedException 
 	{
 		//UpdatePasswordPage up = PageFactory.initElements(driver, UpdatePasswordPage.class);
@@ -89,7 +89,7 @@ public class UpdatePasswordTest extends BaseWeb {
 	 * Update password, with correct current password, new password and Co password
 	 * 
 	 */
-	@Test
+	@Test(priority=4)
 	public void F03_UpdatePasswordWithCorrectInput() throws InterruptedException 
 	{
 		//UpdatePasswordPage up = PageFactory.initElements(driver, UpdatePasswordPage.class);

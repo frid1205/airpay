@@ -20,7 +20,7 @@ public class InviteUserTest extends BaseWeb{
 	/*
 	 * User sign in
 	 */
-	@Test
+	@Test(priority=1)
 	public void signIn() throws InterruptedException {
 		userSignIn();
 	}
@@ -30,7 +30,7 @@ public class InviteUserTest extends BaseWeb{
 	 * Invite User with let one or all mandatory fields are empty
 	 * 
 	 */
-	@Test
+	@Test(priority=2)
 	public void N01_InviteUserWithAllMandatoryAreEmpty() throws InterruptedException 
 	{
 		InviteUserPage iup = new InviteUserPage(driver);
@@ -65,7 +65,7 @@ public class InviteUserTest extends BaseWeb{
 	 * N02
 	 * Invite taken username or taken email address
 	 */
-	@Test
+	@Test(priority=3)
 	public void N02_InviteTakenUsernameOrTakenEmailAddress() throws InterruptedException {
 		InviteUserPage iup = new InviteUserPage(driver);
 		SoftAssert sa = new SoftAssert();
@@ -89,7 +89,7 @@ public class InviteUserTest extends BaseWeb{
 	 * N03
 	 * Invite user with valid credential
 	 */
-	@Test
+	@Test(priority=4)
 	public void N03_InviteUserWithValidCredential() throws InterruptedException {
 		InviteUserPage iup = new InviteUserPage(driver);
 		SoftAssert sa = new SoftAssert();

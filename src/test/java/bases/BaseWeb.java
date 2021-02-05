@@ -105,7 +105,7 @@ public class BaseWeb{
 			//System.out.println("-> Input valid password");
 			si.typePassword("Abcde12345!");
 		}else {
-			si.typeUserName("airpay1");
+			si.typeUserName("vittel2");
 			
 			//System.out.println("-> Input valid password");
 			si.typePassword("Abcde12345!");
