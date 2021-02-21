@@ -31,15 +31,15 @@ public class UploadContractPage extends BasePage{
 	@CacheLookup
 	WebElement uploadContractButton;
 	
-	@FindBy(name="download_contract1")
+	@FindBy(xpath="//div//input[@name=\"download_contract1\"]/..")
 	@CacheLookup
 	WebElement downloadContractButton1;
 	
-	@FindBy(name="download_contract2")
+	@FindBy(xpath="//div//input[@name=\"download_contract2\"]/..")
 	@CacheLookup
 	WebElement downloadContractButton2;
 	
-	@FindBy(name="download_contract3")
+	@FindBy(xpath="//div//input[@name=\"download_contract3\"]/..")
 	@CacheLookup
 	WebElement downloadContractButton3;
 	
@@ -66,15 +66,28 @@ public class UploadContractPage extends BasePage{
 	}
 	
 	public void clickOnDownload1() {
-		waitVisibility(downloadContractButton1).click();
+		try {
+			waitVisibility(downloadContractButton1).click();
+		}catch(Exception e) {
+			clickELement(downloadContractButton1);
+		}
+		
 	}
 	
 	public void clickOnDownload2() {
-		waitVisibility(downloadContractButton2).click();
+		try {
+			waitVisibility(downloadContractButton2).click();
+		}catch(Exception e) {
+			clickELement(downloadContractButton2);
+		}
 	}
 	
 	public void clickOnDownload3() {
-		waitVisibility(downloadContractButton3).click();
+		try {
+			waitVisibility(downloadContractButton3).click();
+		}catch(Exception e) {
+			clickELement(downloadContractButton3);
+		}
 	}
 	
 	public boolean somethingWentWrongMessage() {

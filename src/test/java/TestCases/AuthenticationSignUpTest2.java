@@ -175,7 +175,7 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 	 *
 	 */
 	
-	@Test(enabled = false)
+	/*@Test(enabled = false)
 	public void A07_EmailVerificationSuccess () throws InterruptedException 
 	{
 		yopmailPage yp = new yopmailPage(driver);
@@ -192,5 +192,5 @@ public class AuthenticationSignUpTest2 extends BaseWeb{
 		Thread.sleep(10000);
 		
 		
-	}
+	}*/
 }

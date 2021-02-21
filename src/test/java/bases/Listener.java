@@ -105,6 +105,9 @@ public class Listener implements ITestListener {
 					System.out.println("masuk");
 				}*/
 				//System.out.println(countRow+"-"+getCaseNameonExcel);
+				row.getCell(9).setCellValue("-");
+				row.getCell(10).setCellValue("-");
+				row.getCell(11).setCellValue("-");
 				if(getCaseNameonExcel.length()<1||getCaseNameonExcel.isEmpty()||getCaseNameonExcel.equals(""))
 				{
 					try {

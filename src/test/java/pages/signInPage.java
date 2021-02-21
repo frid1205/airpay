@@ -53,6 +53,10 @@ public class signInPage extends BasePage{
 	@CacheLookup
 	List<WebElement> signInUnverifiedMessage;
 	
+	@FindBy(xpath="//h2[contains(text(),\"Log in\")]")
+	@CacheLookup
+	List<WebElement> signInPageVerify;
+	
 	
 	@Step("Input Username")
 	public void typeUserName(String userName)
@@ -95,6 +99,15 @@ public class signInPage extends BasePage{
 	@Step("Verify sign in unverified message is displayed")
 	public boolean signInUnverifiedMessage() {
 		if(!signInUnverifiedMessage.isEmpty()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	@Step("Verify sign in page is displayed")
+	public boolean signInPageVerify() {
+		if(!signInPageVerify.isEmpty()) {
 			return true;
 		}else {
 			return false;

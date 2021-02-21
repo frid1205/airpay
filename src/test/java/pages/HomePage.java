@@ -28,9 +28,24 @@ public class HomePage extends BasePage{
 	@CacheLookup
 	List<WebElement> verifyHomePage;
 	
+	
+	@FindBy(xpath="//h2[contains(text(),\"Your Account is not approved\")]")
+	@CacheLookup
+	List<WebElement> verifyIsNotApprovedMessageDisplayed;
+	
+	
 	//@Step("Verify home page is displayed")
 	public boolean verifyHomePage() {
 		if(!verifyHomePage.isEmpty()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	@Step("Verify is not approved message displayed")
+	public boolean verifyIsNotApprovedMessageDisplayed() {
+		if(!verifyIsNotApprovedMessageDisplayed.isEmpty()==true) {
 			return true;
 		}else {
 			return false;

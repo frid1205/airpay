@@ -1,76 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [AirpayTestSuite]" parallel="tests">
-  <parameter name="headless" value="true"/>
+  <parameter name="headless" value="false"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="env" value="airpay"/>
-  <test thread-count="1" name="Regresion test(failed)" parallel="tests">
+  <test thread-count="1" name="Regresiontest(failed)" parallel="tests">
     <classes>
-      <class name="TestCases.UpdatePasswordTest">
+      <class name="TestCases.CSToolsTest">
         <methods>
-          <include name="F03_UpdatePasswordWithCorrectInput"/>
+          <include name="V01_CreateComplaintsByUser"/>
           <include name="setBaseConfig"/>
           <include name="settupTestingData"/>
           <include name="quitDriver"/>
           <include name="deleteScreenShot"/>
         </methods>
-      </class> <!-- TestCases.UpdatePasswordTest -->
-      <class name="TestCases.ListServiceTest">
-        <methods>
-          <include name="K03_DeactiveService"/>
-          <include name="setBaseConfig"/>
-          <include name="settupTestingData"/>
-          <include name="quitDriver"/>
-          <include name="K04_EditServiceWithLetOneOrAllMandatoryFieldsAreEmpty"/>
-          <include name="deleteScreenShot"/>
-          <include name="K01_AccessListServicePage"/>
-          <include name="K05_EditServiceWithAllMandatoryFieldsAreFilled"/>
-          <include name="K02_ActivateService"/>
-        </methods>
-      </class> <!-- TestCases.ListServiceTest -->
-      <class name="TestCases.ServiceManagementTest">
-        <methods>
-          <include name="setBaseConfig"/>
-          <include name="settupTestingData"/>
-          <include name="quitDriver"/>
-          <include name="deleteScreenShot"/>
-          <include name="R04_RejectService"/>
-        </methods>
-      </class> <!-- TestCases.ServiceManagementTest -->
-      <class name="TestCases.AddServiceTest">
-        <methods>
-          <include name="J03_ThirdStepService"/>
-          <include name="J04_FourthStepService"/>
-          <include name="J05_FifthStepService"/>
-          <include name="J02_SecondStepService"/>
-          <include name="setBaseConfig"/>
-          <include name="settupTestingData"/>
-          <include name="quitDriver"/>
-          <include name="deleteScreenShot"/>
-          <include name="J01_FirstStepAddService"/>
-          <include name="J06_SixthStepService"/>
-        </methods>
-      </class> <!-- TestCases.AddServiceTest -->
-      <class name="TestCases.InviteUserTest">
-        <methods>
-          <include name="N03_InviteUserWithValidCredential"/>
-          <include name="setBaseConfig"/>
-          <include name="settupTestingData"/>
-          <include name="quitDriver"/>
-          <include name="deleteScreenShot"/>
-          <include name="N01_InviteUserWithAllMandatoryAreEmpty"/>
-          <include name="N02_InviteTakenUsernameOrTakenEmailAddress"/>
-        </methods>
-      </class> <!-- TestCases.InviteUserTest -->
-      <class name="TestCases.UploadContractTest">
-        <methods>
-          <include name="G02_DownloadFile"/>
-          <include name="setBaseConfig"/>
-          <include name="settupTestingData"/>
-          <include name="quitDriver"/>
-          <include name="deleteScreenShot"/>
-        </methods>
-      </class> <!-- TestCases.UploadContractTest -->
+      </class> <!-- TestCases.CSToolsTest -->
     </classes>
-  </test> <!-- Regresion test(failed) -->
+  </test> <!-- Regresiontest(failed) -->
 </suite> <!-- Failed suite [AirpayTestSuite] -->

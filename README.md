@@ -1,8 +1,11 @@
 # Airpay And Viettel
 
 Used user for 
-airpay :airpay12/Abcde12345!
+airpay :airpay10/Abcde12345!
 Vittel :vittel2/Abcde12345!
+
+Prepared data :
+Airpay :airpay9/Abcde12345!
 
 
 # Report Result
@@ -10,8 +13,10 @@ Vittel :vittel2/Abcde12345!
 
 - You can also see test result from allure report, with following step :
 1. Open your terminal
-2. CD to [your-repo]/allure-results
-3. Type "allure serve allure-results" in your terminal
+2. Type "allure serve [your-repo]/allure-results" in your terminal
+
+# If you have not install allure report yet, please open this page to installation guide:
+https://docs.qameta.io/allure/
 
 
 # Covered Feauture for now

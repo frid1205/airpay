@@ -3,6 +3,8 @@
  */
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -45,8 +47,6 @@ public class yopmailPage {
 	WebElement confirmAccountButton;
 	
 	
-	
-	
 	public void typeUserName(String name)
 	{
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(this.userName)).sendKeys(name);
@@ -71,5 +71,7 @@ public class yopmailPage {
 	{
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(this.confirmAccountButton)).click();
 	}
+	
+	
 
 }

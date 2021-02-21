@@ -25,6 +25,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
+import pages.SideMenuPage;
 import pages.signInPage;
 
 @Listeners(bases.Listener.class)
@@ -100,7 +101,7 @@ public class BaseWeb{
 		System.out.println("User Login");
 		if(environment.equals("airpay")) {
 			
-			si.typeUserName("airpay12");
+			si.typeUserName("airpay10");
 			
 			//System.out.println("-> Input valid password");
 			si.typePassword("Abcde12345!");
@@ -131,6 +132,12 @@ public class BaseWeb{
 		//System.out.println("-> Click on sign in button");
 		si.clickSignInButton();
 		
+		Thread.sleep(2000);
+	}
+	
+	public void logOut() throws InterruptedException {
+		SideMenuPage smp = new SideMenuPage(driver);
+		smp.clickOnLogoutButton();
 		Thread.sleep(2000);
 	}
 
