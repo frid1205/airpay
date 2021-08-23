@@ -1,3 +1,7 @@
+#Please make sure you don't hit production URL, use stagging URL Instead :
+http://staging.cms.merchant.airpay.mobi/
+http://vittel-staging.infralinkit360.com:8000/
+
 # Airpay And Viettel
 
 Used user for 
@@ -15,7 +19,7 @@ Airpay :airpay9/Abcde12345!
 1. Open your terminal
 2. Type "allure serve [your-repo]/allure-results" in your terminal
 
-# If you have not install allure report yet, please open this page to installation guide:
+# If you have not install allure report yet, please open this page to see installation guide:
 https://docs.qameta.io/allure/
 
 
